@@ -109,6 +109,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+redSocial/
 
 # Spyder project settings
 .spyderproject
