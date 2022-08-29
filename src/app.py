@@ -28,6 +28,26 @@ def guardar_user():
         return render_template("error.html")
 
 
+@app.route("/yadir")
+def yadir():
+    return render_template("yadir.html")
+
+@app.route("/emerson")
+def emerson():
+    return render_template("emerson.html")
+
+@app.route("/andres")
+def andres():
+    return render_template("andres.html")
+
+@app.route("/karen")
+def karen():
+    return render_template("karen.html")
+
+@app.route("/juan")
+def juan():
+    return render_template("juan.html")
+
 #ruta de error 404
 @app.errorhandler(404)
 def page_not_found(error):
