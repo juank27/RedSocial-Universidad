@@ -1,7 +1,182 @@
-{% extends './layout.html' %}
-{% block titulo %}
-Name de la biografia
-{% endblock %}
-{% block body %}
-<h1>Aca el nombre</h1>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yadir</title>
+  <!-- CDN de Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Hoja de estilos Personalizada -->
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+
+<body>
+  <div>
+
+  </div>
+  <div class="bg-clip-border p-2 bg-slate-50 pt-6 md:p-8 text-center md:text-center space-y-4 dark:text-sky-900  ">
+    <h1 class="text-lg font-medium  text-3xl ">Bienvenidos </h1>
+  </div>
+
+  <figure class="md:flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-100">
+    <img class="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto"
+      src="{{url_for('static', filename='./img/yadir/ft.png')}}" alt="" width="384" height="512">
+    <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
+      <blockquote>
+        <p class="text-lg font-medium">
+
+        </p>
+      </blockquote>
+      <figcaption class="font-medium">
+        <div class="text-sky-500 dark:text-gray-800">
+          Hola mi nombre es Edilson Yadir Yomayuza, tengo 21 años, vivo en Carmen de Carupa Cundinamarca, actualmente
+          estudio en la Universidad de Cundinamarca seccional-Ubaté
+        </div>
+        <div class="text-slate-700 dark:text-slate-500">
+          Estudiante Ingienería de Sistemas, Noveno Semestre
+        </div>
+      </figcaption>
+    </div>
+  </figure>
+
+  <br>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full">
+    <div class="shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden cursor-pointer">
+      <img class="object-cover w-full h-48" src="{{url_for('static', filename='./img/yadir/f1.jpg')}}"
+        alt="Flower and sky" />
+
+      <div class="relative p-4">
+        <h3 class="text-base md:text-xl font-medium text-gray-800">
+          Niñez
+        </h3>
+        <ul class="space-y-4">
+          <p class="mt-4 text-base md:text-lg text-gray-600">
+            Mi niñez la viví en casa de mis padres y abuelos, me gustaba mucho el campo por sus diversos espacios.
+            Jugaba con mi hermana, tambien tenía juguetes como carros. Inicie mis estudios de primaria a los 5 años y
+            termine
+            a los 10 años.
+
+            <li class="flex items-center">
+              <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="11" />
+                <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+              </svg>
+              <p class="ml-4">
+                Estudie en la sede Camilo Torres de vereda Salitre, Carmen de Carupa.
+
+              </p>
+            </li>
+
+            <li class="flex items-center ">
+              <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="11" />
+                <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+              </svg>
+              <p class="ml-4">
+                En esos tiempos me gustaba desarmar cosas por curiosidad.
+              </p>
+            </li>
+
+          </p>
+        </ul>
+      </div>
+    </div>
+
+    <div class="shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden cursor-pointer">
+      <img class="object-cover w-full h-48" src="{{url_for('static', filename='./img/yadir/f2.jpg')}}"
+        alt="Flower and sky" />
+
+      <div class="relative p-4">
+        <h3 class="text-base md:text-xl font-medium text-gray-800">
+          Adolescencia
+        </h3>
+
+        <ul class="space-y-4">
+          <p class="mt-4 text-base md:text-lg text-gray-600">
+            Inicie mis estudios de secundaria a los 11 años con apoyo de mis padres, inicialmente era aplicado, luego mi
+            disciplina decayó, pero aún así cumplía con mis deberes sin necesidad de que alguien me supervisara,
+            conocí nuevas personas tanto positivas como negativas. El deporte de niño me gustaba más en el colegio no
+            obtuve la misma acogida. En grado decimo inicie con el proyecto productivo para la graduación enfocado en
+            procesamiento de frutas y hortalizas, dicho proyecto
+            se culminó en grado Once.
+
+            <li class="flex items-center">
+              <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="11" />
+                <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+              </svg>
+              <p class="ml-4">
+                Estudie en la Institución Educativa Departamental Carmen de Carupa.
+
+              </p>
+            </li>
+
+            <li class="flex items-center ">
+              <svg class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="11" />
+                <path d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9" fill="none" />
+              </svg>
+              <p class="ml-4">
+                Me gradué a los 16 años,
+              </p>
+            </li>
+
+          </p>
+        </ul>
+      </div>
+    </div>
+
+    <div class="shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden cursor-pointer">
+      <img class="object-cover w-full h-48" src="{{url_for('static', filename='./img/yadir/f3.jpeg')}}"
+        alt="Flower and sky" />
+
+      <div class="relative p-4">
+        <h3 class="text-base md:text-xl font-medium text-gray-800">
+          Pasatiempos
+        </h3>
+
+        <ul class="space-y-4">
+          <p class="mt-4 text-base md:text-lg text-gray-600">
+            Me gusta montar bicicleta, aunque muy poco lo hago, me gusta pasar tiempo con mi familia, conocer nuevos
+            lugares, aventurar en cosas nuevas, también me gusta la mecánica, pasar con mis compañeros de la
+            Universidad. En parte me gusta la programación, pero no totalmente. En los tiempos libre miro videos de
+            interés o consulto recursos que me aporten a la formación.
+          </p>
+
+          </p>
+        </ul>
+      </div>
+    </div>
+
+    <div class="shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden cursor-pointer">
+      <img class="object-cover w-full h-48" src="{{url_for('static', filename='./img/yadir/f4.jpeg')}}"
+        alt="Flower and sky" />
+
+      <div class="relative p-4">
+        <h3 class="text-base md:text-xl font-medium text-gray-800">
+          Metas
+        </h3>
+
+        <ul class="space-y-4">
+          <p class="mt-4 text-base md:text-lg text-gray-600">
+            Mi meta es graduarme, seguir aprendiendo nuevas cosas de la carrera o afines, aplicar a un buen trabajo,
+            viajar a diversos lugares del país junto a mi familia y pareja, apoyar a mis padres cuando lo requieran,
+            tener diversas experiencias laborales que me permitan mejorar mi capacidad profesional, montar un
+            emprendimiento basado en intereses de mis conocimientos.
+
+
+
+          </p>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</html>
