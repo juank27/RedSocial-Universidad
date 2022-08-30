@@ -1,7 +1,157 @@
-{% extends './layout.html' %}
-{% block titulo %}
-Name de la biografia
-{% endblock %}
-{% block body %}
-<h1>Aca el nombre</h1>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duvan Andres Espitia Santana</title>
+  <!-- CDN de Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <div>
+
+  </div>
+  <div class="bg-clip-border p-2 bg-slate-50 pt-6 md:p-8 text-center md:text-center space-y-4 dark:text-sky-900  ">
+    <h1 class="text-lg font-medium  text-3xl ">Bienvenidos a mí bibliografía </h1>
+  </div>
+  <figure class="md:flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-100">
+    <!-- <img class="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto"
+     src="{{url_for('static', filename='./img/andres/perfil.jpeg')}}" alt="" width="384" height="512"> -->
+    <img class="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" src="{{url_for('static', filename='./img/andres/perfil.jpeg')}}"
+      alt="" width="384" height="512">
+    <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
+      <blockquote>
+        <p class="text-lg font-medium">
+          Extrovertido, alegre, viendo el lado positivo de las cosas!!
+        </p>
+      </blockquote>
+      <figcaption class="font-medium">
+        <div class="text-sky-500 dark:text-gray-800">
+          Duvan Andres Espitia Santana ( Aitiipse )
+        </div>
+        <div class="text-slate-700 dark:text-slate-500">
+          Estudiante de Ingenería de Sistemas, Noveno Semestre.
+        </div>
+      </figcaption>
+    </div>
+  </figure>
+
+  <br>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full">
+    <div class="shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden cursor-pointer">
+      <!-- <img class="object-cover w-full h-48" src="{{url_for('static', filename='./img/andres/niñez.jpeg')}}" alt="niñez" /> -->
+      <img class="object-cover w-full h-48" src="{{url_for('static', filename='./img/andres/niñez.jpeg')}}" alt="niñez" />
+      <div class="relative p-4">
+        <h3 class="text-base md:text-xl font-medium text-gray-800">
+          Niñez
+        </h3>
+        <ul class="space-y-4">
+          <p class="mt-4 text-base md:text-lg text-gray-600">
+            Nacido en 1997 en Ubaté Cundinamarca, el segundo de tres hermanos, por cierto el mas malgeniado y
+            problematico, creci en una familia llena de amor y quiza por eso era bastante gordo.
+            <br> Estudie en la escuela volcan 1 toda mi primaria con amistades que siguen aun al dia de hoy.
+          </p>
+      </div>
+    </div>
+
+    <div class="shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden cursor-pointer">
+      <!--  <img class="object-cover w-full h-48" src="{{url_for('static', filename='./img/andres/adolescencia.jpeg')}}"-->
+      <img class="object-cover w-full h-48" src="{{url_for('static', filename='./img/andres/adolescencia.jpeg')}}" alt="adolescencia" />
+
+
+      <div class="relative p-4">
+        <h3 class="text-base md:text-xl font-medium text-gray-800">
+          Adolescencia
+        </h3>
+
+        <ul class="space-y-4">
+          <p class="mt-4 text-base md:text-lg text-gray-600">
+            Estudie en el colegio El Volcan en la zona rural del municipio, era bastante activo en las
+            actividades extracurricuares, siendo merecedor por ello de un reconocimiento el dia de grado
+            por parte de coordinacion de la institución, amante del deporte y la naturaleza nunca he sido de Salir
+            mas por el contrario siempre de casa.
+
+          </p>
+
+      </div>
+    </div>
+
+    <div class="shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden cursor-pointer">
+      <!--<img class="object-cover w-full h-48" src="{{url_for('static', filename='./img/andres/pasatiempos.jpeg')}}"-->
+      <img class="object-cover w-full h-48" src="{{url_for('static', filename='./img/andres/pasatiempos.jpeg')}}" alt="pasatiempos" />
+
+
+      <div class="relative p-4">
+        <h3 class="text-base md:text-xl font-medium text-gray-800">
+          Pasatiempos
+        </h3>
+
+        <ul class="space-y-4">
+          <p class="mt-4 text-base md:text-lg text-gray-600">
+            Aprendiendo cosas nuevas es que se vive mejor por ello intento no quedar un dia sin vivir o adquirir algo
+            que me va a servir para el dia de mañana y por ello estudio la carrera en busca de aprendizaje no solo
+            profesional sino para la vida
+            y de esta manera ver las cosas desde un mejor angulo.
+            me gusta montar bicicleta, los paisajes despues de una lluvia, los buenos ratos
+            al lado de buena compañia y sobre todo lo que mas amo hacer es pasar tiempo de calidad con mi pareja
+            bien sea saliendo o compartiendo, visitando nuevos lugares o hablando de nosotros porque de eso se trata
+            esto, de crecer, de dar y recibir, de
+            estar orgulloso y siempre para el otro, junto con nuestra mascota Nieve todo se hace mas bonito.
+
+      </div>
+    </div>
+
+    <div class="shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden cursor-pointer">
+      <!-- <img class="object-cover w-full h-48" src="{{url_for('static', filename='./img/andres/metas.jpeg')}}" alt="Metas" />-->
+      <img class="object-cover w-full h-48" src="{{url_for('static', filename='./img/andres/metas.jpeg')}}" alt="Metas" />
+      <div class="relative p-4">
+        <h3 class="text-base md:text-xl font-medium text-gray-800">
+          Metas
+        </h3>
+
+        <ul class="space-y-4">
+          <p class="mt-4 text-base md:text-lg text-gray-600">
+            A corto plazo esta graduarme de la carrera que actualmente tengo, para asi poder desempeñarme en un campo
+            amplio de trabajo y asi lograr la estabilidad economica que anhelo y la
+            cual se busca a fin de cuentas.
+            a mediano plazo cumplir las metas de pareja apoyandonos en nuestro crecimiento y momentos dificiles de
+            incertidumbre,
+            poderle dar un lugar amplio a nieve y que mis padres esten orgullosos de mi y de las desiciones que he
+            tomado para llegar a cierto lugar.
+            a largo plazo se tiene planeado estar bien economicamente para poder disfrutar de los frutos de un buen
+            esfuerzo y de tanto tiempo, sin tener que pensar en el mañana o
+            el que pasará, viajar, conocer y vivir experiencias nuevas.
+
+          </p>
+      </div>
+    </div>
+    <form>
+      <input type="button" class="atras" id="atras" value="Volver" onclick="history.back()">
+      <style>
+        input {
+          text-decoration: none;
+          display: inline-block;
+          padding: 8px 16px;
+          background-color: rgb(117, 137, 230);
+          color: black;
+          border-radius: 12px;
+        }
+
+        input:hover {
+          background-color: rgb(54, 63, 104);
+          color: rgb(253, 253, 253);
+        }
+
+        .atras {
+          background-color: #6078bb;
+          color: black;
+        }
+      </style>
+    </form>
+  </div>
+
+</html>
