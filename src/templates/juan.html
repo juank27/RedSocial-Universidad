@@ -1,7 +1,109 @@
-{% extends './layout.html' %}
-{% block titulo %}
-Name de la biografia
-{% endblock %}
-{% block body %}
-<h1>Aca el nombre</h1>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Juan</title>
+	<!-- CDN de Tailwind CSS -->
+	<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+	<div>
+	</div>
+	<div class="bg-clip-border p-2 bg-slate-50 pt-6 md:p-8 text-center md:text-center space-y-4 dark:text-sky-900  ">
+		<h1 class="text-lg font-medium  text-3xl ">Bienvenidos a mí bibliografía </h1>
+	</div>
+	<figure class="md:flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-100">
+		<img class="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto"
+			src="{{url_for('static', filename='./img/juan/foto.png')}}" alt="" width="384" height="512">
+		<div class="pt-6 md:p-8 text-center md:text-left space-y-4">
+			<blockquote>
+				<p class="text-lg font-medium">
+					Autodidacta, dedicado y y siempre queriendo aprender algo Nuevo!!
+				</p>
+			</blockquote>
+			<figcaption class="font-medium">
+				<div class="text-sky-500 dark:text-gray-800">
+					Juan Carlos Ruiz Montaño
+				</div>
+				<div class="text-slate-700 dark:text-slate-500">
+					Estudiante de Ingenería de Sistemas, Noveno Semestre.
+				</div>
+			</figcaption>
+		</div>
+	</figure>
+	<br>
+	<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full">
+		<div class="shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden cursor-pointer">
+			<img class="object-cover w-full h-48" src="{{url_for('static', filename='./img/karen/mia3.jpeg')}}"
+				alt="niñez" />
+			<div class="relative p-4">
+				<h3 class="text-base md:text-xl font-medium text-gray-800">
+					Niñez
+				</h3>
+				<ul class="space-y-4">
+					<p class="mt-4 text-base md:text-lg text-gray-600">
+						Naci en Ubate cundinamarca en el año 2000, me gustaba jugar mucho y segun era muy canson,y tampoco no me gustaba comer mucho.
+						Entre a la escuela a los 5 años, practicaba el futbol y desde entonces le tengo mucho aprecio a este deporte.
+					</p>
+			</div>
+		</div>
+		<div class="shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden cursor-pointer">
+			<img class="object-cover w-full h-48" src="{{url_for('static', filename='./img/juan/amigos.jpg')}}"
+				alt="adolescencia" />
+			<div class="relative p-4">
+				<h3 class="text-base md:text-xl font-medium text-gray-800">
+					Adolescencia
+				</h3>
+				<ul class="space-y-4">
+					<p class="mt-4 text-base md:text-lg text-gray-600">
+						Fui al colegio en Carmen de Carupa, era un buen estudiante, "Eso creo", segui practicando el futbol , micro futbol
+						pero tuve una lesion en la rodilla, segui jugando y en continuidad de 3 años me lesione y no volvi a practicarlo.
+						Me gradue a los 17 años del colegio, luego ingrese a la universidad a estudiar Ingenieria de Sistemas.
+					</p>
+					<p class="mt-4 text-base md:text-lg text-gray-600">
+						Conoci unos muy buenos amigos y mi novia ♥️ , "Los mejores", y aun aqui estamos todos juntos tratando de aprender algo nuevo
+						y poder terminar la carrera a tiempo.
+					</p>
+			</div>
+		</div>
+		<div class="shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden cursor-pointer">
+			<img class="object-cover w-full h-48" src="{{url_for('static', filename='./img/juan/viajar.jpg')}}"
+				alt="pasatiempos" />
+			<div class="relative p-4">
+				<h3 class="text-base md:text-xl font-medium text-gray-800">
+					Pasatiempos
+				</h3>
+				<ul class="space-y-4">
+					<p class="mt-4 text-base md:text-lg text-gray-600">
+						Mis pasatiempos favoritos es compartir con amigos, Viajar con mi novia, conocer nuevos lugares, pueblitos.
+						Me gusta mucho escuchar musica, ver futbol (Ya no lo practico pero disfruto viendolo),
+						tambien jugar video juegos, ver peliculas, cocinar.
+						Y en general veo mucho ocntenido multimedia, que me contribuye a aprender nuevas cosas.
+					</p>
+			</div>
+		</div>
+		<div class="shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden cursor-pointer">
+			<img class="object-cover w-full h-48" src="{{url_for('static', filename='./img/juan/familia.jpg')}}"
+				alt="Metas" />
+			<div class="relative p-4">
+				<h3 class="text-base md:text-xl font-medium text-gray-800">
+					Metas
+				</h3>
+				<ul class="space-y-4">
+					<p class="mt-4 text-base md:text-lg text-gray-600">
+						Mis metas es poder graduarme de la universidad, y poder trabajar en un rol como desarrollador de software.
+						Ayudar a mi familia en lo que requieran.
+						Seguir viajando y conocer muchos lugares.
+					</p>
+					<p class="mt-4 text-base md:text-lg text-gray-600">
+						Y algo primordial, nunca dejar de aprender. "Esto es algo que aprendi con la posibilidad de estudiar en Platzi 💚"
+					</p>
+			</div>
+		</div>
+	</div>
+
+</html>

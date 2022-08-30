@@ -1,7 +1,111 @@
-{% extends './layout.html' %}
-{% block titulo %}
-Name de la biografia
-{% endblock %}
-{% block body %}
-<h1>Aca el nombre</h1>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emerson</title>
+  <!-- CDN de Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <div>
+
+  </div>
+  <div class="bg-clip-border p-2 bg-slate-50 pt-6 md:p-8 text-center md:text-center space-y-4 dark:text-sky-900  ">
+    <h1 class="text-lg font-medium  text-3xl ">Bienvenidos a mí bibliografía </h1>
+  </div>
+  <figure class="md:flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-100">
+    <img class="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" src="{{url_for('static', filename='./img/emerson/Foto1.jpg')}}" alt="" width="384"
+      height="512">
+    <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
+      <blockquote>
+        <p class="text-lg font-medium">
+          “Descripción del estudiante”
+        </p>
+      </blockquote>
+      <figcaption class="font-medium">
+        <div class="text-sky-500 dark:text-gray-800">
+          Emerson Judiño Pachon Ayala
+        </div>
+        <div class="text-slate-700 dark:text-slate-500">
+          Estudiante de Ingenería de Sistemas, Noveno Semestre.
+        </div>
+      </figcaption>
+    </div>
+  </figure>
+
+  <br>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full">
+    <div class="shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden cursor-pointer">
+      <img class="object-cover w-full h-48" src="{{url_for('static', filename='./img/emerson/mia4.jpg')}}" alt="niñez" />
+
+      <div class="relative p-4">
+        <h3 class="text-base md:text-xl font-medium text-gray-800">
+          Niñez
+        </h3>
+        <ul class="space-y-4">
+          <p class="mt-4 text-base md:text-lg text-gray-600">
+            Nací el 31 de Octubre de 2000, en el municipio de Ubate, estudio mi primaria en Sutatutasa, y la secundaria
+            en Tausa, me encanta hacer deporte, leer y cocinar.
+          </p>
+      </div>
+    </div>
+
+    <div class="shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden cursor-pointer">
+      <img class="object-cover w-full h-48" src="{{url_for('static', filename='./img/emerson/mia2.jpg')}}" alt="adolescencia" />
+
+      <div class="relative p-4">
+        <h3 class="text-base md:text-xl font-medium text-gray-800">
+          Adolescencia
+        </h3>
+
+        <ul class="space-y-4">
+          <p class="mt-4 text-base md:text-lg text-gray-600">
+            Durante mi adolescencia, megustaba hacer demasiado deporte, participaba en campeonatos de futbol de salon, y
+            durante esta epoca me gustaba realizar mantenimiento de computadores, me gradue en el año 2017.
+
+          </p>
+
+      </div>
+    </div>
+
+    <div class="shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden cursor-pointer">
+      <img class="object-cover w-full h-48" src="{{url_for('static', filename='./img/emerson/mia1.jpg')}}" alt="pasatiempos" />
+
+      <div class="relative p-4">
+        <h3 class="text-base md:text-xl font-medium text-gray-800">
+          Pasatiempos
+        </h3>
+
+        <ul class="space-y-4">
+          <p class="mt-4 text-base md:text-lg text-gray-600">
+            Mis pasantiempos favoritos es jugar futbol, baloncesto, me gustaba salir demasioado con mis amigos, me
+            gustaba bailar y perrear hasta el piso.
+
+      </div>
+    </div>
+
+    <div class="shadow hover:shadow-md w-full bg-white rounded-lg overflow-hidden cursor-pointer">
+      <img class="object-cover w-full h-48" src="{{url_for('static', filename='./img/emerson/mia3.jpg')}}" alt="Metas" />
+
+      <div class="relative p-4">
+        <h3 class="text-base md:text-xl font-medium text-gray-800">
+          Metas
+        </h3>
+
+        <ul class="space-y-4">
+          <p class="mt-4 text-base md:text-lg text-gray-600">
+            Mi meta, a corto plazo es poder graduarme, de alguna manera, y conseguir una pareja que me quiera, valore y
+            pueda pasar el resto de mi vida, en una casita a las afueras de Ubaté.
+            Y tambien llevarme a mi familia de viaje
+
+          </p>
+      </div>
+    </div>
+  </div>
+
+</html>
