@@ -9,7 +9,15 @@ app = Flask(__name__)
 #ruta de la pagina principal
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("indexPrueba.html")
+
+#ruta de la pagina principal
+@app.route("/update_user")
+def update_user():
+    users = con_db['usuario']
+    encontrados = users.find()
+    print(encontrados)
+    return render_template("update_user.html", users=encontrados)
 
 #guardar los usuarios
 @app.route("/guardar_user", methods=['POST'])
@@ -26,6 +34,37 @@ def guardar_user():
         return redirect(url_for('index'))
     else:
         return render_template("error.html")
+
+#eliminar usuarios
+@app.route("/delete/<string:name>")
+def delete(name):
+    users = con_db['usuario']
+    users.delete_one({"name": name})
+    return redirect(url_for('update_user'))
+
+#update usuarios
+@app.route("/update/<string:namee>", methods=['POST'])
+def update(namee):
+    users = con_db['usuario']
+    name = request.form['name']
+    apellido = request.form['apellido']
+    email = request.form['email']
+    password = request.form['password']
+    # user = users.find_one({"name": name})
+    print(name, apellido, email, password)
+    if name != '' and apellido != '' and email != '' and password != '':
+        users.update_one({"name": namee},
+        {
+            "$set": {
+                    "name": name,
+                    "apellido": apellido,
+                    "email": email,
+                    "password": password
+                }
+        })
+        return redirect(url_for('update_user'))
+    else:
+        return redirect(url_for('page_not_found'))
 
 
 @app.route("/yadir")

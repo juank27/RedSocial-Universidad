@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1>Este es la seccion de update</h1>
+	{%for user in users %}
+	<hr>
+	<form action="/update/{{user.name}}" method="POST">
+		<label for="name">Nombre</label>
+		<input type="text" name="name" value="{{user.name}}">
+		<label for="apellido">Apellido</label>
+		<input type="text" name="apellido" value="{{user.apellido}}">
+		<label for="email">Email</label>
+		<input type="email" name="email" value="{{user.email}}">
+		<label for="password">Contraseña</label>
+		<input type="password" name="password" value="{{user.password}}">
+		<button type="submit">Actualizar</button>
+		<a onclick="return confirm('Eliminar ?')" href="{{ url_for('delete', name=user.name)}}"> Delete </a>
+	</form>
+	<li id="name">Nombre: {{user.name}}</li>
+	<li>Apellido: {{user.apellido}}</li>
+	<li>Email: {{user.email}}</li>
+	{% endfor %}
+</body>
+<script>
+	
+</script>
+
+</html>
