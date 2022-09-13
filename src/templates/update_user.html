@@ -12,7 +12,8 @@
 	<h1>Este es la seccion de update</h1>
 	{%for user in users %}
 	<hr>
-	<form action="/update/{{user.name}}" method="POST">
+	<!-- <form action="/update/{{user.name}}" method="POST"> -->
+	<form action="/update/{{user._id}}" method="POST">
 		<label for="">{{user._id}}</label>
 		<label for="name">Nombre</label>
 		<input type="text" name="name" value="{{user.name}}">

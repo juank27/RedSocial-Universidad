@@ -46,8 +46,23 @@ def delete(_id):
     users.delete_one({"_id": ObjectId(_id) })
     return redirect(url_for('update_user'))
 
+@app.route("/busqueda/<string:name>")
+def busqueda(name):
+    name = name.lower()
+    users = con_db['usuario']
+    #encontrados = users.find({"name": {"$regex": name}})
+    encontrados = [user for user in users.find()]
+    print("🚀 ~ file: app.py ~ line 55 ~ encontrados", encontrados)
+    #encontrados = users.find()
+    encontrados2 = []
+    for i in encontrados:
+        e = i.get("name").lower()
+        if name in e:
+            encontrados2.append(i)
+    return render_template("update_user.html", users=encontrados2)
+
 #update usuarios
-@app.route("/update/<string:namee>", methods=['POST'])
+@app.route("/update/<namee>", methods=['POST'])
 def update(namee):
     users = con_db['usuario']
     name = request.form['name']
@@ -57,7 +72,7 @@ def update(namee):
     # user = users.find_one({"name": name})
     print(name, apellido, email, password)
     if name != '' and apellido != '' and email != '' and password != '':
-        users.update_one({"name": namee},
+        users.update_one({"_id": ObjectId(namee)},
         {
             "$set": {
                     "name": name,
