@@ -1,6 +1,7 @@
 from flask import Flask, render_template, url_for, request, redirect
 from config import *
 from persona import Persona
+from bson.objectid import ObjectId # Para crear ObjectId, porque _id como cadena no funciona
 
 con_db = conection()
 
@@ -36,10 +37,13 @@ def guardar_user():
         return render_template("error.html")
 
 #eliminar usuarios
-@app.route("/delete/<string:name>")
-def delete(name):
+@app.route("/delete/<_id>")
+def delete(_id):
+    print("🚀 ~ file: app.py ~ line 41 ~ name", _id)
+    print(type(_id))
     users = con_db['usuario']
-    users.delete_one({"name": name})
+    # users.delete_one({"name": name})
+    users.delete_one({"_id": ObjectId(_id) })
     return redirect(url_for('update_user'))
 
 #update usuarios
