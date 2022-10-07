@@ -6,7 +6,7 @@ MONGO = 'mongodb+srv://juank27:12345@redsocial.jj35ufe.mongodb.net/?retryWrites=
 
 certificado = certifi.where()
 
-
+#connetcion a la base de datos
 def conection():
     try:
         client = MongoClient(MONGO, tlsCAFile=certificado)
